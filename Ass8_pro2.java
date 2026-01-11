@@ -1,0 +1,42 @@
+package com.index;
+
+import java.util.Scanner;
+
+public class Ass8_pro2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the number of rows: ");
+		int row = sc.nextInt();
+		
+		System.out.println("Enter the number of colums: ");
+		int col = sc.nextInt();
+		
+		int[][] arr = new int[row][col];
+		
+		System.out.println("Enter the elements of the array: ");
+		for(int i=0;i<row;i++)
+			for(int j=0;j<col;j++) {
+		           arr[i][j] = sc.nextInt();
+			}
+		
+		int largest = arr[0][0];
+		
+		for(int i=0;i<row;i++)
+			for(int j=0;j<col;j++) {
+				
+					if(arr[i][j]>largest) {
+					largest = arr[i][j];
+				}
+			}
+		System.out.println("The largest element of the array: "+largest);			
+		
+		
+		sc.close();
+		
+	
+
+	}
+
+}
